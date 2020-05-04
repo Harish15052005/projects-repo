@@ -1,0 +1,72 @@
+body{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #111;
+	height: 100vh;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:240px;
+	border: 3px solid #000;
+	border-radius: 10px;
+	flex-wrap: wrap;
+	box-shadow: 2px 2px 8px rgba(0,0,0,.8),
+				-2px -2px 8px rgba(255,255,255,.2);
+}
+
+ul li{
+	height: 60px;
+	width: 60px;
+	margin:30px;
+	list-style: none;
+	position: relative;
+}
+
+ul li label input[type="checkbox"]{
+	position: absolute;
+	opacity: 0;
+	border:none;
+}
+
+ul li label .iconBox{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border: 3px solid #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius:10px;
+	box-shadow: 2px 2px 8px rgba(0,0,0,.8),
+				-2px -2px 8px rgba(255,255,255,.2);
+	cursor: pointer;
+
+}
+
+ul li label .iconBox .fa{
+	font-size: 32px;
+	color:#32cd32;
+}
+
+ul li label input[type="checkbox"]:checked ~ .iconBox{
+	box-shadow: 0px 0px 10px deepskyblue,
+				0px 0px 20px deepskyblue,
+				inset 2px 2px 8px rgba(0,0,0,.8),
+				inset -2px -2px 8px rgba(255,255,255,.2);
+
+}
+
+ul li label input[type="checkbox"]:checked ~ .iconBox .fa{
+	color: deepskyblue;
+	text-shadow: 0px 0px 10px deepskyblue,
+				0px 0px 20px deepskyblue;
+}

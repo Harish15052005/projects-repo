@@ -1,0 +1,67 @@
+*{margin:0;padding:0;box-sizing: border-box;}
+
+body{
+	height: 200vh;
+}
+
+.header{
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	top:0;
+	left:0;
+	z-index: 1111;
+}
+
+.header .side{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background: url('../img/bg1.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.header .side#side1{
+	clip-path: polygon(0% 0%, 67% 0%,
+	27% 15%, 69% 26%, 21% 33%, 63% 44%, 
+	27% 57%, 62% 66%, 20% 73%, 60% 84%, 
+	22% 89%, 64% 100%, 0% 100%);
+}
+
+.header .side#side2{
+	clip-path: polygon(100% 0, 67% 0%, 
+		27% 15%, 69% 26%, 21% 33%, 
+		63% 44%, 27% 57%, 62% 66%, 
+		20% 73%, 60% 84%, 22% 89%, 
+		64% 100%, 100% 100%);
+}
+
+section{
+	position: sticky;
+	top:0;
+	left:0;
+	height: 200vh;
+	width: 100%;
+	margin-top: 150vh;
+	padding: 55px;
+	background: black;
+	color: white;
+	font-family: verdana;
+}
+
+section h2{
+	position: sticky;
+	font-size: 4em;
+	margin-bottom: 15px;
+	margin-top: 100vh;
+}
+
+section p{
+	font-size: 19px;
+	letter-spacing: 4px;
+	text-align: justify-all;
+}

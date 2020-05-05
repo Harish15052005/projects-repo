@@ -1,0 +1,100 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	height: 100vh;
+	width: 100%;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container a{
+	text-decoration:none;
+	font-size: 1.9rem;
+	letter-spacing: 6px;
+	color:#32cd32;
+	padding:25px 30px;
+	position: relative;
+	overflow: hidden;
+	font-weight: bolder;
+	font-family: consolas;
+}
+
+.container a:hover{
+	transition: 1s;
+	transition-delay: 1s;
+	color:black;
+	box-shadow: 0px 0px 40px #32cd32,
+				0px 0px 80px #32cd32;
+	animation: huee 2s linear infinite;
+	animation-delay: 1s;
+	border-radius: 15px;
+}
+
+.container a span{
+	position: absolute;
+}
+.container a span:nth-child(1){
+	height: 3px;
+	width: 100%;
+	background: linear-gradient(45deg,transparent,#32cd32);
+	left:-100%;
+	top:0;
+}
+.container a:hover span:nth-child(1){
+	left:100%;
+	transition: 1s;
+	transition-delay: 0s;
+}
+.container a span:nth-child(3){
+	height: 3px;
+	width: 100%;
+	background: linear-gradient(270deg,transparent,#32cd32);
+	right:-100%;
+	bottom:0;
+}
+.container a:hover span:nth-child(3){
+	right:100%;
+	transition: 1s;
+	transition-delay: 0.5s;
+}
+.container a span:nth-child(2){
+	width:3px;
+	height: 100%;
+	background: linear-gradient(180deg,transparent,#32cd32);
+	right:0;
+	top:-100%;
+}
+.container a:hover span:nth-child(2){
+	top:100%;
+	transition: 1s;
+	transition-delay: 0.25s;
+}
+.container a span:nth-child(4){
+	width:3px;
+	height: 100%;
+	background: linear-gradient(360deg,transparent,#32cd32);
+	left:0;
+	bottom:-100%;
+}
+.container a:hover span:nth-child(4){
+	bottom:100%;
+	transition: 1s;
+	transition-delay: 0.75s;
+}
+
+@keyframes huee{
+	0%{
+		filter: hue-rotate(0deg);
+		background: linear-gradient(45deg,#32cd32,deepskyblue);
+	}
+	100%{
+		filter: hue-rotate(360deg);
+		background: linear-gradient(45deg,#32cd32,deepskyblue);
+	}
+}

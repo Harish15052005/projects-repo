@@ -1,0 +1,38 @@
+*{
+	margin: 0;padding: 0;
+}
+
+body{
+	display: flex;justify-content: center;align-items:center;
+	height: 100vh;
+	background: #111
+}
+
+.loader{
+	position: relative;
+	cursor: pointer;
+}
+
+.loader span{
+	position: relative;
+	text-transform: uppercase;
+	position: inline-block;
+	animation:ani 2s linear infinite;
+	font-size: 2rem;
+	color:white;
+	animation-delay: calc(0.1s * var(--i));
+	animation-play-state: paused;
+}
+
+.loader:hover span{
+	animation-play-state: running;
+}
+
+@keyframes ani{
+	0%,40%,100%{
+		top: 0px;
+	}
+	20%{
+		top: -50px;
+	}
+}

@@ -1,0 +1,67 @@
+body{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: #eaeaea
+}
+
+ul{
+	margin:0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	background: #eaeaea;
+	width:240px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 8px rgba(0,0,0,.4),
+				-3px -3px 8px rgba(255,255,255,.8);
+
+}
+
+ul li{
+	list-style: none;
+	position: relative;
+	margin: 30px;
+	height: 60px;
+	width: 60px;
+	position: relative;
+}
+
+ul li label input[type="checkbox"]{
+	position: absolute;
+	opacity: 0;
+	border:none;
+}
+
+ul li label .iconBox{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width:100%;
+	background: #eaeaea;
+	box-shadow: 2px 2px 8px rgba(0,0,0,.4),
+				-3px -3px 8px rgba(255,255,255,.8);
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+ul li label .iconBox .fa{
+	font-size: 28px;
+	color:rgba(0,0,0,.4);
+}
+
+ul li label input[type="checkbox"]:checked ~ .iconBox{
+	box-shadow: inset 2px 2px 8px rgba(0,0,0,.4),
+				inset -3px -3px 8px rgba(255,255,255,.8);
+}
+
+ul li label input[type="checkbox"]:checked ~ .iconBox .fa{
+	font-size: 22px;
+	color: rgba(0,0,0,.7);
+}
